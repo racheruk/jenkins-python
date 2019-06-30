@@ -15,7 +15,7 @@ pipeline {
 
                 sh "pwd"
                 sh "git clone https://github.com/rakcheru/jenkins-python-server.git"
-                sh "python hello-server.py"
+                sh "python jenkins-python-server/hello-server.py"
             }
         }
         stage('GIT') {
