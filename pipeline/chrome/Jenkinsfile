@@ -6,8 +6,8 @@ pipeline {
         stage('GIT') {
             steps {
 
-                echo "BUILD NUMBER IS ${BUILD_NUMBER}"
-                echo "BUILD NUMBER IS ${env.BUILD_NUMBER}"
+                echo "BUILD NUMBER IS ${BUILD_NUMBER2}"
+                echo "BUILD NUMBER IS ${env.BUILD_NUMBER2}"
                 checkout scm
             }
         }
