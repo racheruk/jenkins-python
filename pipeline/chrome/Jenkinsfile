@@ -12,9 +12,6 @@ pipeline {
             }
             steps {
                 // This step actually install TeamForge and get te URL for following stages
-
-                sh "pwd"
-                sh "git clone https://github.com/rakcheru/jenkins-python-server.git"
                 sh "python jenkins-python-server/hello-server.py"
             }
         }
