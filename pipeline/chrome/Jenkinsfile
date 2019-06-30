@@ -3,7 +3,6 @@ pipeline {
     agent { label 'docker' }
 
     stages {
-
         stage('GIT') {
             steps {
                 checkout scm
