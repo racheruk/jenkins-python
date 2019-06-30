@@ -3,9 +3,24 @@ pipeline {
     agent { label 'docker' }
 
     stages {
-        stage('GIT') {
-            steps {
+        /*stage('Setup TeamForge app') {
 
+            agent {
+                docker { image 'python:2.7-slim' }
+            }
+            steps {
+                // This step actually install TeamForge and get te URL for following stages
+                sh
+            }
+        }*/
+        stage('GIT') {
+
+            agent {
+                docker {
+                    image 'python:2.7-slim'
+                }
+            }
+            steps {
                 echo "BUILD NUMBER IS ${TEAMFORGE_CORE_BUILD_VERSION}"
                 echo "BUILD NUMBER IS ${env.TEAMFORGE_CORE_BUILD_VERSION}"
                 checkout scm
