@@ -6,8 +6,8 @@ pipeline {
         stage('GIT') {
             steps {
 
-                echo "BUILD NUMBER IS ${BUILD_NUMBER2}"
-                echo "BUILD NUMBER IS ${env.BUILD_NUMBER2}"
+                echo "BUILD NUMBER IS ${TEAMFORGE_CORE_BUILD_VERSION}"
+                echo "BUILD NUMBER IS ${env.TEAMFORGE_CORE_BUILD_VERSION}"
                 checkout scm
             }
         }
